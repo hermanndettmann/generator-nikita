@@ -63,7 +63,7 @@ module.exports = function(grunt) {
 				data: '<%%= paths.src %>/assemble/data/**/*.{json,yml}',
 				helpers: ['handlebars-helper-partial', '<%%= paths.src %>/assemble/helpers/**/*.js'],
 				layoutdir: '<%%= paths.src %>/assemble/layouts/',
-				partials: ['<%%= paths.src %>/assemble/partials/**/*.hbs'],
+				partials: ['<%%= paths.src %>/components/**/*.hbs'],
 				currentTimestamp: (new Date()).getTime()
 			},
 			dev: {
@@ -615,7 +615,8 @@ module.exports = function(grunt) {
 		// Configuration for SCSS linting
 		scsslint: {
 			allFiles: [
-				'<%%= paths.src %>/sass/{blocks,extends,mixins,variables,styles.scss,_*.scss}'
+				'<%%= paths.src %>/sass/{extends,mixins,variables,styles.scss,_*.scss}',
+				'<%%= paths.src %>//_*.scss'
 			],
 			options: {
 				colorizeOutput: true,
@@ -654,7 +655,7 @@ module.exports = function(grunt) {
 			all: {
 				files: [
 					{
-						'styleguide': '<%%= paths.src %>/sass/blocks/**/*.scss'
+						'styleguide': '<%%= paths.src %>/components/**/*.scss'
 					}
 				]
 			}

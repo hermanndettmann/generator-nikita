@@ -382,7 +382,7 @@ var NikitaGenerator = yeoman.generators.Base.extend({
 			this.template('source/sass/_basics.scss.ejs', sourceFolder + '/sass/_basics.scss');
 			
 			// SASS Extra Files
-			this.template('source/sass/blocks/_rwd-testing.scss.ejs', sourceFolder + '/sass/blocks/_rwd-testing.scss');
+			this.template('source/components/rwd-testing/_rwd-testing.scss.ejs', sourceFolder + '/components/rwd-testing/_rwd-testing.scss');
 			this.template('source/sass/extends/.gitkeep', sourceFolder + '/sass/extends/.gitkeep');
 			this.template('source/sass/extends/_buttons.scss.ejs', sourceFolder + '/sass/extends/_buttons.scss');
 			
@@ -405,7 +405,7 @@ var NikitaGenerator = yeoman.generators.Base.extend({
 			// Assemble Folders
 			this.directory('source/assemble/data', sourceFolder + '/assemble/data');
 			this.directory('source/assemble/helpers', sourceFolder + '/assemble/helpers');
-			this.template('source/assemble/partials/.gitkeep', sourceFolder + '/assemble/partials/.gitkeep');
+			this.template('source/components/.gitkeep', sourceFolder + '/components/.gitkeep');
 
 			// Image README Files
 			this.template('source/img/bgs/README.md.ejs', sourceFolder + '/img/bgs/README.md');
@@ -477,7 +477,7 @@ var NikitaGenerator = yeoman.generators.Base.extend({
 			}
 			else
 			{
-				this.template('source/sass/blocks/styleguide.md.ejs', sourceFolder + '/sass/blocks/styleguide.md');
+				this.template('source/sass/styleguide.md.ejs', sourceFolder + '/sass/styleguide.md');
 				this.directory('source/styleguide-template', sourceFolder + '/styleguide-template');
 			}
 			
@@ -512,7 +512,7 @@ var NikitaGenerator = yeoman.generators.Base.extend({
 			}
 			else
 			{
-				this.template('source/assemble/partials/gitinfos.hbs.ejs', sourceFolder + '/assemble/partials/gitinfos.hbs');
+				this.template('source/components/gitinfos.hbs.ejs', sourceFolder + '/components/gitinfos.hbs');
 			}
 			
 			// Optional Layering-Mixin
@@ -531,7 +531,7 @@ var NikitaGenerator = yeoman.generators.Base.extend({
 			if (this.config.get('formFramework'))
 			{
 				this.template('source/assemble/pages/forms.hbs.ejs', sourceFolder + '/assemble/pages/forms.hbs');
-				this.template('source/sass/blocks/_forms.scss.ejs', sourceFolder + '/sass/blocks/_forms.scss');
+				this.template('source/components/forms/_forms.scss.ejs', sourceFolder + '/components/forms/_forms.scss');
 				this.src.copy('source/img/bgs/form-select-arrow-down.svg', sourceFolder + '/img/bgs/form-select-arrow-down.svg');
 			}
 			
